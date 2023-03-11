@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>view-win scroll-y example</title>
+  <script src="../src/index.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    ul {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      overflow: auto;
+      width: 110px;
+      height: 200px;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 8%);
+    }
+    ul li {
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    li:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li onclick="handleClick()">rmListener</li>
+    <li>JQuery</li>
+    <li>Angular</li>
+    <li>React</li>
+    <li>Vue</li>
+    <li>Nodejs</li>
+    <li>npm</li>
+    <li>nrm</li>
+    <li>nvm</li>
+  </ul>
+  
+  <script>
+    const viewWin = new ViewWin({
+      target: document.querySelector('#list'),
+      direction: 'y',
+      vmid: true
+    })
+    function handleClick() {
+      console.log('remove listener...');
+      viewWin.rmEvent()
+    }
+  </script>
+</body>
+</html>
