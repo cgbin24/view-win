@@ -45,5 +45,5 @@ npm uninstall view-win
 
 #### examples
 
-[demos](https://github.com/cgbin24/view-win/examples)
+[demos](https://github.com/cgbin24/view-win/tree/master/examples)
 
