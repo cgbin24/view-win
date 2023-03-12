@@ -8,6 +8,8 @@ const list = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'rmListener', 'JQuery',
 const viewWinV = ref()
 const viewWinH = ref()
 onMounted(() => {
+  console.log(ViewWin);
+  
   viewWinV.value = new ViewWin({
     target: ele.value,
     direction: 'x',

@@ -6,16 +6,6 @@ import babel from "rollup-plugin-babel"; // babel 插件
 import { uglify } from 'rollup-plugin-uglify';
 import { name, version, author } from './package.json'
 
-const paths = {
-  input: {
-      root:  'src/index.js',
-  },
-  output: {
-      root:  'dist/',
-  },
-};
-const fileName = `view-win.js`
-
 const pkgName = 'view-win'
 const banner =
 '/*!\n' +
@@ -28,44 +18,27 @@ export default {
   input: 'src/index.js',
   output: [
     {
-      file: `dist/${pkgName}.umd.js`,
-      format: 'umd',
-      name: pkgName,
-      banner
-    },
-    {
-      file: `dist/${pkgName}.umd.min.js`,
-      format: 'umd',
-      name: pkgName,
-      banner,
-      plugins: [uglify()]
-    },
-    {
-      file: `dist/${pkgName}.cjs.js`,
-      format: 'cjs',
-      name: pkgName,
-      banner
-    },
-    {
-      file: `dist/${pkgName}.esm.js`,
+      file: `dist/${pkgName}.js`,
       format: 'es',
+      name: pkgName,
       banner
     }
 
   ],
   plugins: [
+    resolve(),
     babel({
       exclude: 'node_modules/**',
       runtimeHelpers: true,
       include: '**/*.js'
     }),
     json(),
-    resolve(),
     commonjs(),
     uglify(),
   ],
   ignore: [
     "node_modules/**"
-  ]
+  ],
+  sourceMap: true
   
 }
