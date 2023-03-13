@@ -1,0 +1,9 @@
+<ul id="list" #eleRef>
+  <li
+    *ngFor="let item of list"
+    [class.rmListener]="item === 'rmListener'"
+    (click)="item === 'rmListener' && handleRemove()"
+  >
+    {{ item }}
+  </li>
+</ul>
