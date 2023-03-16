@@ -43,7 +43,7 @@ npm uninstall view-win
 | 参数      | 说明                             | 类型        | 默认值 |
 | --------- | -------------------------------- | ----------- | ------ |
 | target    | 目标容器                         | HTMLElement | null   |
-| direction | 滚动方向                         | `x` | `y`   | `y`    |
+| direction | 滚动方向                         | `x` ｜ `y`   | `y`    |
 | vmid      | 是否开启点击选项居中显示（可选） | boolean     | false  |
 
 
