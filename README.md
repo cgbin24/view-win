@@ -1,7 +1,12 @@
 # view-win
 
 <p align="start">
-  <a href="https://www.npmjs.com/package/view-win"><img src="https://img.shields.io/npm/v/view-win.svg" alt="npm package"></a>
+  <a href="https://www.npmjs.com/package/view-win">
+    <img src="https://img.shields.io/npm/v/view-win.svg" alt="npm package">
+  </a>
+  <a href="https://www.npmjs.com/package/view-win">
+    <img src="https://img.shields.io/npm/dt/view-win.svg" alt="downloads"/>
+  </a>
 </p>
 
 > 视窗显示
